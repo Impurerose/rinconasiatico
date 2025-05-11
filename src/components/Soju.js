@@ -1,0 +1,91 @@
+import React from "react";
+import backgroundImage from "../assets/img/ra-background.jpg";
+import sojuImg from "../assets/img/soju.png";
+import { useShoppingCart } from "./ShoppingCartContext";
+import { getSojuProducts } from "../store/productData";
+
+function Soju() {
+  const { addToCart } = useShoppingCart();
+  const products = getSojuProducts();
+
+  const handleAddToCart = (product) => {
+    // Asegurarnos de que la categoría está presente antes de añadir al carrito
+    const productWithCategory = {
+      ...product,
+      category: product.category || "soju", // Usar la categoría existente o asignar "soju" por defecto
+    };
+
+    // Agregar el producto con la categoría garantizada
+    addToCart(productWithCategory);
+
+    // Para debugging: mostrar en consola el producto agregado
+    console.log("Producto agregado al carrito:", productWithCategory);
+  };
+
+  return (
+    <div
+      className="min-h-screen bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      <div
+        className="min-h-screen"
+        style={{ backgroundColor: "rgba(245, 232, 199, 0.85)" }}
+      >
+        <div className="container mx-auto px-4 py-16">
+          <div className="flex flex-col items-center mb-12">
+            <div className="flex flex-col items-center justify-center pb-40">
+              <img src={sojuImg} alt="Soju" className="object-contain" />
+              <h1 className="heading-primary text-7xl lg:text-[10rem]  text-center">
+                Soju
+              </h1>
+            </div>
+            {/* Grilla de productos */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-7xl">
+              {products.map((product) => (
+                <div
+                  key={product.id}
+                  className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
+                  {/* Imagen sin padding/margin, ocupando todo el ancho */}
+                  <div className="_h-[320px] w-full overflow-hidden">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  {/* Contenido con padding */}
+                  <div className="p-5">
+                    <h3 className="text-2xl heading-secondary font-medium mb-2">
+                      {product.name}
+                    </h3>
+                    <p className="text-xl text-primary mb-1 font-semibold">
+                      {product.price}
+                    </p>
+                    <button
+                      className="mt-3 w-full text-white py-2 px-4 rounded relative overflow-hidden group"
+                      onClick={() => handleAddToCart(product)}
+                    >
+                      <div
+                        className="text-lg mt-4 px-10 text-merienda py-4 font-semibold mx-auto block rounded-3xl w-fit
+                      transition duration-700 hover:bg-[#a19150] bg-[#bg-[#719100] border-[rgb(86,63,19)] text-white bg-[#6c722f]"
+                      >
+                        <button>Agregrar al carrito</button>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Soju;
