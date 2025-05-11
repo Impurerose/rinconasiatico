@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6199774f.css",
+    "main.js": "/static/js/main.a56ce361.js",
+    "static/js/453.8c7e9e9b.chunk.js": "/static/js/453.8c7e9e9b.chunk.js",
+    "static/media/ra-background.jpg": "/static/media/ra-background.7347ea05c139e8a37a90.jpg",
+    "static/media/ra-logo-transparent.png": "/static/media/ra-logo-transparent.36056bb88d0c77421bc4.png",
+    "static/media/manzana.webp": "/static/media/manzana.e476bcf8c24ec2a7e3f0.webp",
+    "static/media/arandanos.webp": "/static/media/arandanos.324ea922db6975a3136d.webp",
+    "static/media/mariscos.webp": "/static/media/mariscos.69bd76d3770c02859f20.webp",
+    "static/media/carne-repollo-escabeche.webp": "/static/media/carne-repollo-escabeche.06df6c047c3324c59c58.webp",
+    "static/media/cerdo-y-cebolla.webp": "/static/media/cerdo-y-cebolla.4bdcc459e1e03eed78eb.webp",
+    "static/media/carne-asada.webp": "/static/media/carne-asada.678cee56414257821c3d.webp",
+    "static/media/sandia.webp": "/static/media/sandia.56de6e98727c33bab0e2.webp",
+    "static/media/carne-picante.webp": "/static/media/carne-picante.3c3769cb2770a0c0e081.webp",
+    "static/media/original.webp": "/static/media/original.ba13f96b58240e744ac6.webp",
+    "static/media/pollo-estofado.webp": "/static/media/pollo-estofado.178398698fbc4e34908f.webp",
+    "static/media/candy.png": "/static/media/candy.45614254abcf94e54953.png",
+    "static/media/soda.png": "/static/media/soda.b9c2bb334ea2cfdaa03f.png",
+    "static/media/soju.png": "/static/media/soju.1cfad83c52f78416d955.png",
+    "static/media/snack.png": "/static/media/snack.7ce1f26801084027cbf0.png",
+    "static/media/mango.webp": "/static/media/mango.eef1f6df40e74bd6eee6.webp",
+    "static/media/durazno.webp": "/static/media/durazno.f0c16bf66ca8a9bee070.webp",
+    "static/media/ramen.png": "/static/media/ramen.8ae3e2a26d4bed0c0f98.png",
+    "static/media/uva-verde.webp": "/static/media/uva-verde.e1d1b0bec48063ccfa3c.webp",
+    "index.html": "/index.html",
+    "main.6199774f.css.map": "/static/css/main.6199774f.css.map",
+    "main.a56ce361.js.map": "/static/js/main.a56ce361.js.map",
+    "453.8c7e9e9b.chunk.js.map": "/static/js/453.8c7e9e9b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6199774f.css",
+    "static/js/main.a56ce361.js"
+  ]
+}
