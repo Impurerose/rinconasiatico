@@ -39,7 +39,7 @@ function Navbar() {
             {/* Logo pequeño siempre visible */}
             <img
               src={logoTransparent}
-              alt="Rincón Asiático"
+              alt="Rincón Asiáticox"
               className="h-12 w-auto"
             />
             <span className="ml-2 text-2xl font-bold text-merienda text-[#81591e] hidden sm:inline">
@@ -111,19 +111,20 @@ function Navbar() {
               Snacks
             </Link>
           </div>
-
           {/* Carrito incorporado en el navbar */}
-          <div
-            className="relative p-2 rounded-full bg-[#719100] hover:bg-[#85a800] cursor-pointer transition-colors duration-300"
-            onClick={handleCartClick}
-          >
-            <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-amber-600 flex items-center justify-center">
-              <span className="text-xs font-semibold text-white">
-                {getCartItemCount()}
-              </span>
+          {getCartItemCount() > 0 && (
+            <div
+              className="relative p-2 rounded-full bg-[#719100] hover:bg-[#85a800] cursor-pointer transition-colors duration-300"
+              onClick={handleCartClick}
+            >
+              <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-amber-600 flex items-center justify-center">
+                <span className="text-xs font-semibold text-white">
+                  {getCartItemCount()}
+                </span>
+              </div>
+              <ShoppingCartIcon size={28} color="#bfec21" />
             </div>
-            <ShoppingCartIcon size={28} color="#bfec21" />
-          </div>
+          )}
         </div>
       </div>
     </nav>
