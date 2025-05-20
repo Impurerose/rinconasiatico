@@ -1,18 +1,18 @@
 import React from "react";
 import backgroundImage from "../assets/img/ra-background.jpg";
-import sojuImg from "../assets/img/soju.png";
+import candyImg from "../assets/img/candy.png";
 import { useShoppingCart } from "./ShoppingCartContext";
-import { getSojuProducts } from "../store/productData";
+import { getCandiesProducts } from "../store/productData";
 
-function Soju() {
+function Candies() {
   const { addToCart } = useShoppingCart();
-  const products = getSojuProducts();
+  const products = getCandiesProducts();
 
   const handleAddToCart = (product) => {
     // Asegurarnos de que la categoría está presente antes de añadir al carrito
     const productWithCategory = {
       ...product,
-      category: product.category || "soju", // Usar la categoría existente o asignar "soju" por defecto
+      category: product.category || "candies", // Usar la categoría existente o asignar "candies" por defecto
     };
 
     // Agregar el producto con la categoría garantizada
@@ -38,9 +38,9 @@ function Soju() {
         <div className="container mx-auto px-4 py-16">
           <div className="flex flex-col items-center mb-12">
             <div className="flex flex-col items-center justify-center pb-40">
-              <img src={sojuImg} alt="Soju" className="object-contain" />
-              <h1 className="heading-primary text-5xl lg:text-[10rem]  text-center">
-                Soju
+              <img src={candyImg} alt="Golosinas" className="object-contain" />
+              <h1 className="heading-primary text-5xl lg:text-[10rem] text-center">
+                Golosinas
               </h1>
             </div>
             {/* Grilla de productos */}
@@ -88,4 +88,4 @@ function Soju() {
   );
 }
 
-export default Soju;
+export default Candies;

@@ -1,18 +1,19 @@
+// filepath: /home/impure/Desktop/ra/src/components/Ramen.js
 import React from "react";
 import backgroundImage from "../assets/img/ra-background.jpg";
-import sojuImg from "../assets/img/soju.png";
+import ramenImg from "../assets/img/ramen.png";
 import { useShoppingCart } from "./ShoppingCartContext";
-import { getSojuProducts } from "../store/productData";
+import { getRamenProducts } from "../store/productData";
 
-function Soju() {
+function Ramen() {
   const { addToCart } = useShoppingCart();
-  const products = getSojuProducts();
+  const products = getRamenProducts();
 
   const handleAddToCart = (product) => {
     // Asegurarnos de que la categoría está presente antes de añadir al carrito
     const productWithCategory = {
       ...product,
-      category: product.category || "soju", // Usar la categoría existente o asignar "soju" por defecto
+      category: product.category || "ramen", // Usar la categoría existente o asignar "ramen" por defecto
     };
 
     // Agregar el producto con la categoría garantizada
@@ -37,10 +38,10 @@ function Soju() {
       >
         <div className="container mx-auto px-4 py-16">
           <div className="flex flex-col items-center mb-12">
-            <div className="flex flex-col items-center justify-center pb-40">
-              <img src={sojuImg} alt="Soju" className="object-contain" />
-              <h1 className="heading-primary text-5xl lg:text-[10rem]  text-center">
-                Soju
+            <div className="flex flex-col md:flex-row items-center justify-center pb-40">
+              <img src={ramenImg} alt="Ramen" className="object-contain" />
+              <h1 className="heading-primary text-7xl lg:text-[10rem] text-center">
+                Ramen
               </h1>
             </div>
             {/* Grilla de productos */}
@@ -50,15 +51,16 @@ function Soju() {
                   key={product.id}
                   className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
-                  {/* Imagen sin padding/margin, ocupando todo el ancho */}
-                  <div className="h-[320px] w-full overflow-hidden">
+                  {/* Imagen con altura fija y centrado */}
+                  <div className="h-[250px] w-full overflow-hidden flex items-center justify-center p-4">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-contain"
+                      className="max-h-full max-w-full object-contain"
                     />
                   </div>
                   {/* Contenido con padding */}
+                  <hr className="w-full" />
                   <div className="p-5">
                     <h3 className="text-2xl heading-secondary font-medium mb-2">
                       {product.name}
@@ -67,15 +69,11 @@ function Soju() {
                       {product.price}
                     </p>
                     <button
-                      className="mt-3 w-full text-white py-2 px-4 rounded relative overflow-hidden group"
                       onClick={() => handleAddToCart(product)}
+                      className="text-lg mt-4 px-10 text-merienda py-4 font-semibold mx-auto block rounded-3xl w-full
+                      transition duration-700 hover:bg-[#a19150] text-white bg-[#6c722f]"
                     >
-                      <div
-                        className="text-lg mt-4 px-10 text-merienda py-4 font-semibold mx-auto block rounded-3xl w-fit
-                      transition duration-700 hover:bg-[#a19150] bg-[#719100] border-[rgb(86,63,19)] text-white"
-                      >
-                        <button>Agregar al carrito</button>
-                      </div>
+                      Agregar al carrito
                     </button>
                   </div>
                 </div>
@@ -88,4 +86,4 @@ function Soju() {
   );
 }
 
-export default Soju;
+export default Ramen;

@@ -28,7 +28,7 @@ function Navbar() {
   const { getCartItemCount } = useShoppingCart();
 
   const handleCartClick = () => {
-    navigate("/");
+    navigate("/checkout");
   };
 
   return (
@@ -89,9 +89,8 @@ function Navbar() {
               }`}
             >
               Golosinas
-            </Link>
-            <Link
-              to="/candies"
+            </Link>              <Link
+              to="/bebidas"
               className={`text-lg font-medium transition-colors duration-300 hover:text-amber-800 ${
                 location.pathname === "/bebidas"
                   ? "text-amber-800 font-bold"
@@ -101,7 +100,7 @@ function Navbar() {
               Bebidas
             </Link>
             <Link
-              to="/candies"
+              to="/snacks"
               className={`text-lg font-medium transition-colors duration-300 hover:text-amber-800 ${
                 location.pathname === "/snacks"
                   ? "text-amber-800 font-bold"

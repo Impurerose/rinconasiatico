@@ -7,6 +7,8 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import Soju from './components/Soju';
 import Ramen from './components/Ramen';
+import Candies from './components/Candies';
+import Checkout from './components/Checkout';
 import reportWebVitals from './reportWebVitals';
 import { ShoppingCartProvider } from './components/ShoppingCartContext';
 
@@ -20,7 +22,8 @@ root.render(
             <Route path="/" element={<Home />} />
             <Route path="/soju" element={<Soju />} />
             <Route path="/ramen" element={<Ramen />} />
-            <Route path="/candies" element={<ComingSoon title="Golosinas" />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/candies" element={<Candies />} />
             <Route path="/bebidas" element={<ComingSoon title="Bebidas" />} />
             <Route path="/snacks" element={<ComingSoon title="Snacks" />} />
             <Route path="*" element={<NotFound />} />

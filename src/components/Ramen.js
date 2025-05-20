@@ -40,7 +40,7 @@ function Ramen() {
           <div className="flex flex-col items-center mb-12">
             <div className="flex flex-col md:flex-row _flex-col items-center justify-center pb-40">
               <img src={ramenImg} alt="Ramen" className="object-contain" />
-              <h1 className="heading-primary text-7xl lg:text-[10rem] text-center">
+              <h1 className="heading-primary text-5xl lg:text-[10rem] text-center">
                 Ramen
               </h1>
             </div>
@@ -52,7 +52,7 @@ function Ramen() {
                   className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
                   {/* Imagen sin padding/margin, ocupando todo el ancho */}
-                  <div className="_h-[320px] p-8 w-full overflow-hidden">
+                  <div className="h-[320px] p-8 w-full overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -82,9 +82,9 @@ function Ramen() {
 
                       <div
                         className="text-lg mt-4 px-10 text-merienda py-4 font-semibold mx-auto block rounded-3xl w-fit
-                      transition duration-700 hover:bg-[#a19150] bg-[#bg-[#719100] border-[rgb(86,63,19)] text-white bg-[#6c722f]"
+                      transition duration-700 hover:bg-[#a19150] bg-[#719100] border-[rgb(86,63,19)] text-white"
                       >
-                        <button>Agregrar al carrito</button>
+                        <button>Agregar al carrito</button>
                       </div>
                     </button>
                   </div>

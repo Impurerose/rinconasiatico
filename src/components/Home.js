@@ -28,7 +28,7 @@ function Home() {
                 <div className="hover:scale-110 transition-transform duration-1000 flex flex-col items-center relative">
                   {ramenItemsInCart > 0 && (
                     <div className="text-3xl text-asian py-2 px-4 font-semibold rounded-full absolute md:right-14 lg:top-6 lg:right-12 top-8 right-8 bg-[#d2a356] border-4 border-[rgb(86,63,19)] text-[#81591e]">
-                      10
+                      {ramenItemsInCart}
                     </div>
                   )}{" "}
                   <div>
@@ -64,10 +64,12 @@ function Home() {
                 </div>
               </Link>
 
-              <Link to="/candies">
+              <Link to="/candies" className="flex flex-col items-center">
                 <div className="hover:scale-110 transition-transform duration-1000 flex flex-col items-center relative">
                   {candiesItemsInCart > 0 && (
-                    <div className="text-3xl text-asian py-2 px-4 font-semibold rounded-full absolute top-5 right-4 bg-[#d2a356] border-4 border-[rgb(86,63,19)] text-[#81591e]"></div>
+                    <div className="text-3xl text-asian py-2 px-4 font-semibold rounded-full absolute top-5 right-4 bg-[#d2a356] border-4 border-[rgb(86,63,19)] text-[#81591e]">
+                      {candiesItemsInCart}
+                    </div>
                   )}
                   <div>
                     <img
@@ -76,8 +78,8 @@ function Home() {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <span className="text-merienda text-3xl text-primary font-semibold">
-                    Golosinas
+                  <span className="text-merienda text-3xl text-center text-primary font-semibold">
+                    Snacks y Golosinas
                   </span>
                 </div>
               </Link>
@@ -86,7 +88,7 @@ function Home() {
                 <div className="hover:scale-110 transition-transform duration-1000 flex flex-col items-center relative">
                   {drinksItemsInCart > 0 && (
                     <div className="text-3xl text-asian py-2 px-4 font-semibold rounded-full absolute top-5 right-4 bg-[#d2a356] border-4 border-[rgb(86,63,19)] text-[#81591e]">
-                      10
+                      {drinksItemsInCart}
                     </div>
                   )}
                   <div>
@@ -102,13 +104,13 @@ function Home() {
                 </div>
               </Link>
 
-              <Link to="/snacks" className="flex flex-col items-center">
+              <Link to="/combos" className="flex flex-col items-center">
                 <div className="hover:scale-110 transition-transform duration-1000 flex flex-col items-center relative">
-                  {snacksItemsInCart > 0 && (
+                  {/* {snacksItemsInCart > 0 && (
                     <div className="text-3xl text-asian py-2 px-4 font-semibold rounded-full absolute top-5 right-4 bg-[#d2a356] border-4 border-[rgb(86,63,19)] text-[#81591e]">
-                      4
+                      {snacksItemsInCart}
                     </div>
-                  )}
+                  )} */}
                   <div>
                     <img
                       src={snackImg}
@@ -125,9 +127,11 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="text-2xl px-10 text-merienda py-4 font-semibold mx-auto block rounded-3xl w-fit mt-20 transition duration-700 hover:bg-[#a19150] bg-[#bg-[#719100] border-[rgb(86,63,19)] text-white bg-[#6c722f]">
-        <button>Realizar pedido</button>
-      </div>
+      <Link to="/checkout">
+        <div className="text-2xl px-10 text-merienda py-4 font-semibold mx-auto block rounded-3xl w-fit mt-20 transition duration-700 hover:bg-[#a19150] bg-[#719100] border-[rgb(86,63,19)] text-white">
+          <button>Realizar pedido</button>
+        </div>
+      </Link>
     </div>
   );
 }
