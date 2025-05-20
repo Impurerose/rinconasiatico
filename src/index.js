@@ -25,7 +25,7 @@ root.render(
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/candies" element={<Candies />} />
             <Route path="/bebidas" element={<ComingSoon title="Bebidas" />} />
-            <Route path="/snacks" element={<ComingSoon title="Snacks" />} />
+            <Route path="/combos" element={<ComingSoon title="Combos" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

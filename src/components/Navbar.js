@@ -107,7 +107,7 @@ function Navbar() {
                   : "text-[#81591e]"
               }`}
             >
-              Snacks
+              Combos
             </Link>
           </div>
           {/* Carrito incorporado en el navbar */}

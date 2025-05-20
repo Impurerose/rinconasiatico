@@ -4,6 +4,7 @@ import candyImg from "../assets/img/candy.png";
 import ramenImg from "../assets/img/ramen.png";
 import sodaImg from "../assets/img/soda.png";
 import snackImg from "../assets/img/snack.png";
+import combosImg from "../assets/img/combos.png";
 import sojuImg from "../assets/img/soju.png";
 import { useShoppingCart } from "./ShoppingCartContext";
 
@@ -113,13 +114,13 @@ function Home() {
                   )} */}
                   <div>
                     <img
-                      src={snackImg}
+                      src={combosImg}
                       alt="Snacks"
                       className="w-full h-full object-contain"
                     />
                   </div>
                   <span className="text-merienda text-3xl text-primary font-semibold">
-                    Snacks
+                    Combos
                   </span>
                 </div>
               </Link>
@@ -127,11 +128,14 @@ function Home() {
           </div>
         </div>
       </div>
-      <Link to="/checkout">
-        <div className="text-2xl px-10 text-merienda py-4 font-semibold mx-auto block rounded-3xl w-fit mt-20 transition duration-700 hover:bg-[#a19150] bg-[#719100] border-[rgb(86,63,19)] text-white">
-          <button>Realizar pedido</button>
-        </div>
-      </Link>
+      {/* Mostrar el botón solo si hay productos en el carrito */}
+      {sojuItemsInCart + candiesItemsInCart + drinksItemsInCart + snacksItemsInCart + ramenItemsInCart > 0 && (
+        <Link to="/checkout">
+          <div className="text-2xl px-10 text-merienda py-4 font-semibold mx-auto block rounded-3xl w-fit mt-20 transition duration-700 hover:bg-[#a19150] bg-[#719100] border-[rgb(86,63,19)] text-white">
+            <button>Realizar pedido</button>
+          </div>
+        </Link>
+      )}
     </div>
   );
 }
