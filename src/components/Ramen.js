@@ -45,14 +45,14 @@ function Ramen() {
               </h1>
             </div>
             {/* Grilla de productos */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-7xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-7xl">
               {products.map((product) => (
                 <div
                   key={product.id}
                   className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
                   {/* Imagen sin padding/margin, ocupando todo el ancho */}
-                  <div className="h-[320px] p-8 w-full overflow-hidden">
+                  <div className="h-[320px] w-full overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -60,8 +60,6 @@ function Ramen() {
                     />
                   </div>
                   {/* Contenido con padding */}
-
-                  <hr className="w-full" />
                   <div className="p-5">
                     <h3 className="text-2xl heading-secondary font-medium mb-2">
                       {product.name}
@@ -70,22 +68,10 @@ function Ramen() {
                       {product.price}
                     </p>
                     <button
-                      className="mt-3 w-full text-white py-2 px-4 rounded relative overflow-hidden group"
+                      className="mt-3 w-full text-white py-3 px-4 rounded-3xl text-lg font-semibold bg-[#6c722f] hover:bg-[#8a913b] transition-colors duration-300"
                       onClick={() => handleAddToCart(product)}
                     >
-                      {/* <span
-                        className="absolute w-0 h-full bg-amber-200 left-0 top-0 transition-all duration-500 group-hover:w-full"
-                        style={{ zIndex: 0 }}
-                      ></span> */}
-
-                      {/* <span className="relative z-10">Agregar al carrito</span> */}
-
-                      <div
-                        className="text-lg mt-4 px-10 text-merienda py-4 font-semibold mx-auto block rounded-3xl w-fit
-                      transition duration-700 hover:bg-[#a19150] bg-[#719100] border-[rgb(86,63,19)] text-white"
-                      >
-                        <button>Agregar al carrito</button>
-                      </div>
+                      Agregar al carrito
                     </button>
                   </div>
                 </div>

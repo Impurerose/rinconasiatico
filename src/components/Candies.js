@@ -44,7 +44,7 @@ function Candies() {
               </h1>
             </div>
             {/* Grilla de productos */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-7xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 w-full max-w-7xl">
               {products.map((product) => (
                 <div
                   key={product.id}
@@ -67,15 +67,10 @@ function Candies() {
                       {product.price}
                     </p>
                     <button
-                      className="mt-3 w-full text-white py-2 px-4 rounded relative overflow-hidden group"
+                      className="mt-3 w-full text-white py-3 px-4 rounded-3xl text-lg font-semibold bg-[#6c722f] hover:bg-[#8a913b] transition-colors duration-300"
                       onClick={() => handleAddToCart(product)}
                     >
-                      <div
-                        className="text-lg mt-4 px-10 text-merienda py-4 font-semibold mx-auto block rounded-3xl w-fit
-                      transition duration-700 hover:bg-[#a19150] bg-[#719100] border-[rgb(86,63,19)] text-white"
-                      >
-                        <button>Agregar al carrito</button>
-                      </div>
+                      Agregar al carrito
                     </button>
                   </div>
                 </div>
